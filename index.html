@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <title>Petr Kocian - Technical Consultant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-color: #333;
+      --text-color: #fff;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #fff;
+      --text-color: #333;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h1, h2, h3 {
+      color: var(--text-color);
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      margin: 0 10px;
+    }
+
+    footer {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .contact-icons {
+        flex-wrap: wrap;
+      }
+
+      .contact-icons a {
+        margin: 10px;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Petr Kocian</h1>
+    <p>Technical Consultant</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <img src="half-moon-icon.svg" alt="Toggle Light Mode" width="24" height="24">
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I have built a career in technology focused on continuous learning and effective problem-solving. I started in technical support, where I learned to simplify complex technical issues for clients.</p>
+      <p>As I gained experience, I transitioned to software engineering, developing proofs of concept and integrating third-party products. This role required me to quickly learn new technologies and programming languages.</p>
+      <p>My interest in cloud technologies led me to work as a cloud system administrator, where I utilized tools like AWS and Kubernetes. I developed skills in automation through scripting with Python and Bash, which helped streamline deployments and troubleshoot issues.</p>
+    </section>
+
+    <section id="services">
+      <h2>My Services</h2>
+      <h3>Streamlining Operations Through Automation</h3>
+      <ul>
+        <li>Proficient in Python and Bash scripting for automation</li>
+        <li>Experience in streamlining deployments and troubleshooting issues</li>
+        <li>Skilled in leveraging tools like AWS and Kubernetes for cloud-based environments</li>
+      </ul>
+
+      <h3>Integrating Disparate Technologies</h3>
+      <ul>
+        <li>Adept at developing proofs of concept and integrating third-party products</li>
+        <li>Able to quickly learn and adapt to new technologies and programming languages</li>
+        <li>Experienced in translating complex technical issues into understandable solutions</li>
+      </ul>
+
+      <h3>Delivering Results-Driven Outcomes</h3>
+      <ul>
+        <li>Focused on achieving tangible results that add value to clients and projects</li>
+        <li>Skilled in improving workflows, automating processes, and finding innovative solutions</li>
+        <li>Adaptable to various operating systems, including Linux, Windows, and macOS</li>
+      </ul>
+
+      <h3>Continuous Learning and Adaptation</h3>
+      <ul>
+        <li>Driven by a passion for continuous learning and growth</li>
+        <li>Prepared to learn and master new tools and systems as technology evolves</li>
+        <li>Committed to delivering the best possible outcomes for clients and projects</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you're looking for a technology partner who can adapt to your unique needs, deliver results, and drive innovation, let's connect. I'm excited to learn more about your project and how I can contribute to its success.</p>
+      <div class="contact-icons">
+        <a href="mailto:petr.kocian@yahoo.com">
+          <img src="email-icon.svg" alt="Email" width="24" height="24">
+        </a>
+        <a href="https://www.linkedin.com/in/petrkocian1">
+          <img src="linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Petr Kocian. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle("light-mode");
+      var theme = body.classList.contains("light-mode") ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+
+      // Change icon based on theme
+      var icon = document.querySelector('.dark-mode-toggle img');
+      icon.src = theme === "light" ? "sun-icon.svg" : "half-moon-icon.svg"; // Set appropriate icon
+    }
+  </script>
+</body>
+</html>
